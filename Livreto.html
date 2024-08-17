@@ -1,0 +1,3311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livreto de Oração</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Matemasie&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #47051b;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            position: relative;
+
+
+        }
+
+        .esquerdo {
+            background: #c95b4d;
+            width: 40vw;
+            height: 100vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            margin: 0px 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            background-color: #c95b4d;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -100px 50px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #a1a1a1;
+            border-radius: 4px;
+
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Edu Vic Wa Nt Beginner', sans-serif;
+        }
+
+        button:hover {
+            background-color: #196129;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 5px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            border: 1px solid #a1a1a1;
+
+            text-align: center;
+        }
+
+        p {
+            margin: 4px 0;
+            padding: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="esquerdo">
+        <img class="esquerdo" src="reading-glasses-animate.svg" alt="Cacto">
+
+    </div>
+    <div class="direito">
+        <div class="container">
+            <h1 style="font-family: 'Matemasie', sans-serif; color: #520b02;">Livreto de Oração</h1>
+            <input type="number" id="Dia" placeholder="Escreva o dia atual.">
+            <br>
+            <button onclick="buscarLivro()">Procurar</button>
+            <ul id="lista_biblia">
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        var lista_biblia = [
+            {
+                dia: 1,
+                livro: "Salmos 31",
+                versos: [
+                    {
+                        Titulo: "Salmos 31",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 2,
+                livro: "Salmos 32",
+                versos: [
+                    {
+                        Titulo: "Salmos 32",
+                        texto: "Santo Deus, te louvamos porque derrama tuas bênçãos sobre os corações arrependidos, até que não haja mais espaço para recebê-las. Só Tu, Senhor, quebras maldições e removes obstáculos para receber a bênção."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Agradeço por tua grande misericórdia, e de nos conduzir ao arrependimento quando envergonhamos o teu nome."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Faz de nós servos prontos para confessar humildemente nossos pecados, sem adiar uma confissão arrependida que possa afetar nossa comunhão contigo"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Ensina-nos a encontrar paz por meio da fé e orações fervorosas, pois só em Ti encontramos descanso para a alma"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Compreendemos que a prosperidade contigo não ocorre se permanecermos orgulhosos e soberbos, sem confessar nossos pecados."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Desejamos ser verdadeiros cristãos, felizes em orar diariamente, vencendo o pecado e resistindo às tentações malignas. Corremos para Ti, pois tua presença nos traz segurança e alegria."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que o Senhor nos ensine diariamente por meio da leitura devocional, para que não sejamos inconstantes espirituais, controlados por apetites e paixões."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Estamos certo de que se o amarmos de todo nosso coração, vivendo para Ti e confiando unicamente em Ti, tua misericórdia nos cercará por todos os lados."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que nossa experiência contigo seja tão extraordinária que impacte a vida daqueles ao nosso redor, em casa, no trabalho e nos estudos, com as bênçãos divinas."
+                    },
+                    {
+                        Titulo: "Oramos pela Líbia",
+                        texto: "Para que o Senhor levante um governo interessado no bem-estar da população e no fim da ação de grupos extremistas e criminosos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Clamamos a Ti pelos cristãos secretos, para que tenham sabedoria e coragem de seguir a Jesus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que o ministério de evangelismo por meio de TV e internet no Norte da África alcance mais pessoas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que mais cristãos líbios tenham contato com o evangelho."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que o Senhor se levante contra toda opressão islâmica, e corrupção deste país."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Alcance o coração desses líderes religiosos e políticos não cristãos para que nossos irmãos não sejam atingidos com tanta hostilidade."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "Salmos 33",
+                versos: [
+                    {
+                        Titulo: "Salmos 33",
+                        texto: "Senhor, nós estamos muito alegres, nós te adoramos por tudo o que o Senhor faz por nós."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Cantamos com alegria e com muito entusiasmo e com todos os nossos instrumentos, para festejar o seu Nome."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor faz um avivamento na nossa adoração. Que tua presença nos encha de gozo e cânticos espirituais. Que os dons sobrenaturais do seu Espírito esteja presente em todas as nossas reuniões"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que nossa pregação seja cheia de jubilo e confirmado pelos sinais poderosos do Espírito Santo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que possamos produzir os frutos da justiça, e que sejamos bondosos e generosos uns com os outros."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que o poder da Palavra de Deus, possa produzir grandes transformações em nós e naqueles que vivem ao nosso redor."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que nossa cidade e nosso país, veja o grande mover que virá sobre a igreja fiel e verdadeira."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que essa geração seja impactada e seus efeitos caia sobre novas gerações."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor conhece todos os corações, e pode fazer as mudanças que essa geração precisa."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Nenhum governo ou ideologia, pode salvar as nações, mais o Evangelho é o poder de Deus para salvação. O Senhor tem o controle da história, e pode mudar os rumos da nossa nação."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Só o Senhor tem o poder de transformar todas as coisas. O Senhor tem a solução para todas as coisas. O Senhor tem tudo o que precisamos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é o amado da nossa alma e temos confiado no poder do Nome de Jesus Cristo, que tem toda autoridade no céu e na terra. Em ti Jesus confiamos!"
+                    },
+                    {
+                        Titulo: "Oramos pela Eritréia",
+                        texto: "Para que a justiça de Deus seja feita em favor dos cristãos eritreus que foram presos e torturados, que eles sejam libertos das prisões físicas, emocionais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Tenha misericórdia destes mais de mil cristãos presos injustamente. Ouve o clamor destes irmãos confinados nas pequenas celas e solitárias."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que o Senhor prepare um lindo futuro para todos aqueles que perderam tudo por amor a Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os direitos humanos sejam respeitados na Eritreia e as pessoas tenham liberdade para adorar a Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que o Senhor responda a toda corrupção, crime organizado e opressão islâmica que se levantou contra sua igreja. Que um milagre aconteça e o Evangelho seja livremente pregando neste país."
+                    }
+                ]
+            },
+            {
+                dia: 4,
+                livro: "Salmos 34",
+                versos: [
+                    {
+                        Titulo: "Salmos 34",
+                        texto: "Senhor seja nossa única fonte de alegria. Glória ao Nome de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Te louvamos Senhor, pois tens respondido graciosamente todas as nossas orações e tem nos curados de todas as nossas enfermidades."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Nunca houve, entre nós, alguém que tenha confiado em ti, que não tenha sido recompensado"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor tem curado as emoções do seu povo! O Senhor tem livrado e curado distúrbios e transtornos no meio do seu povo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Os anjos do Senhor têm nos guardado e livrado a todo momento."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Obrigado Senhor, somos muito felizes, pois temos provado e visto sua bondade. Temos vivido seu grande mover no nosso meio."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Temos confiado em ti, o Senhor tem nos dados generosamente todas as coisas, da quais não merecemos, e de nada temos falta! Em tudo temos abundância!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor renova a força dos que amam fazer sua obra. Regenera seu corpo físico e as emoções! Restaura o vigor juvenil do seu povo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seus filhos das enfermidades, e que sejam saudáveis em tudo. Para que possam valorosamente cumprir seus chamados"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que possamos ser uma igreja viva, operosa, santa, piedosa e prospera."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todos saibam que o Senhor é conosco, porque escolhemos viver uma vida que agrada aos seus olhos."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todas as promessas estejam sendo desfrutas em nosso meio!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que tudo o que Senhor fizer, faça primeiramente conosco!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor resgatou nossa alma do pecado, e por isso confiamos em Ti."
+                    },
+                    {
+                        Titulo: "Oramos pelo Iêmen",
+                        texto: "Para que o Senhor derrame paz e amor sobre esse país por meio dos cristãos locais"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos secretos sejam guardados e fortalecidos."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que as famílias sejam impactadas pelo amor de Deus expressado nas atitudes dos cristãos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que mais iemenitas encontrem a Jesus e decidam segui-lo, apesar da perseguição. Proteja, Senhor, todo aquele que decidir te seguir apesar da presença de grupos militantes islâmicos."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Suplicamos para que os convertidos de origem islâmica tenham sabedoria e coragem para compartilhar a fé e que a igreja secreta cresça."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que o Senhor se levante por uma mudança no Iêmen, que a paz venha sobre essa nação, e que acabe toda guerra e crise humanitária"
+                    }
+                ]
+            },
+            {
+                dia: 5,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 35",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 6,
+                livro: "Salmos 36",
+                versos: [
+                    {
+                        Titulo: "Salmos 36",
+                        texto: "Senhor, purifica a nossa mente, livra-nos dos maus pensamentos, que tenhamos temor diante dos teus olhos."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que não tenhamos prazer no pecado, ajude-nos a detestar a iniquidade. Que não haja malícia e engano na nossa boca. Não nos deixe falar mal de ninguém."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos dos maus intentos, não nos deixe andar em um caminho que não te agrada. Ensina-nos a fugir de toda a aparência do mal"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor confiamos na grandeza da sua misericórdia e fidelidade, para viver uma vida de santidade, tanto quanto seja possível desse lado de cá."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Obrigado por tua graça que lançou sobre nós a justiça de Cristo, tornando nos aceitáveis aos seus olhos. Obrigado por todo o cuidado com nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oh graça maravilhosa, que nos alcançou sendo nós ainda pecadores, nos dando abrigo debaixo de suas asas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor te louvamos por tua generosidade em nos prosperar ricamente em todas as coisas e podermos desfrutar dos seus bens."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Tu és a verdadeira vida, que a luz do evangelho resplandeça através de nós."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que sua mão esteja estendida sobre aqueles que obedecem a tua palavra. E a tua justiça sobre os que tem um coração puro."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos da maldade das pessoas ímpias. Livra seu povo das maquinações dos homens perversos."
+                    },
+                    {
+                        Titulo: "Oramos pelo Paquistão",
+                        texto: "Para que cristãos sejam levantados por Deus para ocupar espaços de liderança no país e governem com justiça e igualdade para todos."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que a morte do pastor Siraj e de outros cristãos seja como sementes para a propagação do evangelho no Paquistão."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos por consolo e cura de Deus a todos que perderam entes queridos em ataques extremistas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que o Espírito Santo toque na vida dos jihadistas e que tenham um encontro com Cristo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Te louvamos pela recuperação, restauração, e cura de cada cristão que sobrevive aos ataques e perseguições. Que cada testemunho posso levar os perseguidores a Cristo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que mais cristãos sejam instrumentos de cura para outros atingidos pela intolerância religiosa."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+            {
+                dia: 3,
+                livro: "",
+                versos: [
+                    {
+                        Titulo: "Salmos 1",
+                        texto: "Senhor livra-nos do caos e das acusações injustas. Protege-nos dos inimigos que tentam nos afastar de Ti."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Responda Senhor todas as nossas orações. Produza uma fé firmada nas suas promessas, para que não sejamos levados pelas dúvidas e incertezas"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por amor do seu Nome, guia e cuida de nós em cada detalhe da nossa vida."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra-nos de todas as armadilhas e frustrações que o inimigo faz secretamente."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Não andamos com aqueles que vivem na prática do pecado. Não aprovamos as obras infrutuosas das trevas."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois somos totalmente do Senhor, comprados pelo Sangue de Jesus Cristo!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o Senhor tem sido bom o tempo todo para conosco e por isso te louvamos. O Senhor, nos tem feito o bem o tempo todo, por isso te adoramos!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor ajuda seu povo a confiar em Ti em todas as coisas, para que não vivam ansiosos e depressivos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Livra seu povo de todas as enfermidades causadas pelos distúrbios comportamentais, emocionais, mentais e espirituais."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que seu povo seja livre das enfermidades que vem sobre os ímpios."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Pois o seu povo confia plenamente na sua bondosa vontade."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor livra-nos da perseguição dos que desejam o nosso mal o tempo todo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Senhor que todos os nossos inimigos possam reconhecer que o Senhor está conosco e isso os faça temer e tremor por sua presença."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor é bom para o seu povo! O Senhor opera coisas grandiosas no nosso meio. O Senhor tem provido grandes vitórias!"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O Senhor nos tem dado muito mais abundante do que temos pedido."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "O senhor nos tem prosperado aos olhos dos ímpios para que vejam o seu amor pelo seu povo."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Por isso nossa igreja, não mede esforços para te servir de todo coração! Por isso estamos em todos os cultos para de adorar e agradecer! Por isso amamos a leitura devocional e com alegria te buscamos com oração e jejum."
+                    },
+                    {
+                        Titulo: "Oramos pela Somália",
+                        texto: "Para que o governo tenha sabedoria em conter e frustrar os ataques dos extremistas islâmicos"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que acabe toda opressão islâmica, toda corrupção e ditadura."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Intercedemos para que os cristãos de origem muçulmana sintam-se protegidos e cuidados por Deus."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Que todo investimento para que as crianças muçulmanas se tornem radicais islâmicos, fracasse"
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Clamamos para que os muçulmanos, familiares de cristãos, conheçam a Jesus por meio do testemunho dos parentes."
+                    },
+                    {
+                        Titulo: "",
+                        texto: "Oramos para que as comunidades na Somália sejam impactadas pelo amor e pela graça de Deus"
+                    },
+                    {
+                        Titulo: "",
+                        texto: " Pedimos Senhor, que líderes religiosos do islã se abram para ler e entender mais sobre a Bíblia e a fé cristã."
+                    }
+                ]
+            },
+        ]
+
+        function buscarLivro() {
+            var dia = document.getElementById("Dia").value;
+            var livro_encontrado = null;
+            for (let posicao = 0; posicao < lista_biblia.length; posicao = posicao + 1) {
+                debugger
+                if (dia == lista_biblia[posicao].dia) {
+                    livro_encontrado = lista_biblia[posicao];
+                    break;
+                }
+            }
+
+            var lista_ul = document.getElementById("lista_biblia");
+            lista_ul.innerHTML = ""
+            if (livro_encontrado != null) {
+                var dia = ""
+                for (let posicao = 0; posicao < livro_encontrado.versos.length; posicao = posicao + 1) {
+                    dia = dia + `
+                    <p>
+                        <h4>${livro_encontrado.versos[posicao].Titulo}</h4>
+                        <span>${livro_encontrado.versos[posicao].texto}</span>
+                    </p>
+                `
+                }
+
+                lista_ul.innerHTML = dia
+            } else {
+                lista_ul.innerText = "Oração não encontrada!"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
